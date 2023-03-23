@@ -5,9 +5,6 @@ class TrieNode():
         self.children = dict() # Dictionary indexed by letters with TrieNodes as values
         self.is_word = end_word
 
-    def getValue(self):
-        return self.value
-
 class Trie():
 
     def __init__(self):

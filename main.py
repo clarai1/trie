@@ -10,4 +10,3 @@ for word in lines:
     d.insert(word)
 
 view = TrieView(d)
-view.view_levels()

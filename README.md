@@ -31,7 +31,7 @@ When a letter is the final letter of a word in the trie, its button has red back
 
 Short video demonstration: 
 
-[![Video demonstration](root.png)](ViewTrie_video.mov)
+![Video demonstration](https://user-images.githubusercontent.com/117021003/227970802-d29fe6a4-6189-462c-a421-5d9399667441.mov)
 
 # Structure of the project
 

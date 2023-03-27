@@ -6,6 +6,8 @@ Implementation of a trie for words in Python, with Tkinter interface to visualiz
 
 The goal of this project is to generate a trie of words (incluting only letters A-Z, non-case-sensitive), that can be visualized through a user interface implemented with Tkinter.
 
+## Trie structure
+
 A Trie is described by its height and its root, which is a TrieNode.  
 A TrieNode has a value and a dictionary containing all his children, indexed by the children's values. Another property of the TrieNode is the "is_word" property. If it is `True`, then the TrieNode is the final letter of a word.
 
@@ -17,11 +19,25 @@ A Trie object has the following functions:
 
 The advantage to use a Trie to store words is that the running time of each of these functions only depends on the length of the input word.
 
+## Trie visualization
+
+Once a `Trie` object is created, one can visualize it through a Tkinter interface by generating an instance of the `ViewTrie` class with the generate trie as input.
+
+When creating a `ViewTrie` object, a Tkinter window will open showing only a button "Root".
+After clicking on it, the initials of words present in the trie will appear.
+Clicking on any letter will display the next level of letters present in the trie, starting with the current prefix.
+The current prefix letters are colored in blue. 
+When a letter is the final letter of a word in the trie, its button has red background.
+
+Short video demonstration: 
+
+[![Video demonstration](root.png)](ViewTrie_video.mov)
+
 # Structure of the project
 
 `trie.py` contains the implementation of the TrieNode and Trie classes.
 
-`view_trie.py` contains the implementation of the ViewTrie class, this class is used to generate the user interface to visualize tries.
+`view_trie.py` contains the implementation of the ViewTrie class, this class generates the user interface to visualize a given trie.
 
 `main.py` contains script to create a trie from a `.txt` file and visualize it. 
 

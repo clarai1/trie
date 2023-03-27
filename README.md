@@ -8,16 +8,16 @@ The goal of this project is to generate a trie of words (incluting only letters 
 
 ## Trie structure
 
-A Trie is described by its height and its root, which is a TrieNode.  
-A TrieNode has a value and a dictionary containing all his children, indexed by the children's values. Another property of the TrieNode is the "is_word" property. If it is `True`, then the TrieNode is the final letter of a word.
+A `Trie` is described by its height and its root, which is a `TrieNode`.  
+A `TrieNode` has a value and a dictionary containing all his children, indexed by the children's values. Another property of the `TrieNode` is the "is_word" property. If it is `True`, then the TrieNode is the final letter of a word.
 
 A Trie object has the following functions:
 
-- `find`: given a string of letters, returns `True` if the string is present in the Trie, else returns `False`.
-- `insert`: given a string of letters, inserts the string into the Trie. 
-- `remove`: given a string of letters, if the string is in the Trie, removes the string from the Trie.
+- `find`: given a string of letters, returns `True` if the string is present in the trie, else returns `False`.
+- `insert`: given a string of letters, inserts the string into the trie. 
+- `remove`: given a string of letters, if the string is in the Trie, removes the string from the trie.
 
-The advantage to use a Trie to store words is that the running time of each of these functions only depends on the length of the input word.
+The advantage to use a `Trie` to store words is that the running time of each of these functions only depends on the length of the input word.
 
 ## Trie visualization
 

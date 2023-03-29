@@ -5,6 +5,7 @@ class TrieNode():
         self.children = dict() # Dictionary indexed by letters with TrieNodes as values
         self.is_word = end_word
 
+
 class Trie():
 
     def __init__(self):
@@ -24,11 +25,11 @@ class Trie():
             return False
 
     def insert(self, word: str) -> None:
-        word = word.upper()
-
+        
         if self.height < len(word):
             self.height = len(word)
-
+        
+        word = word.upper()
         current = self.root
         for ch in word: 
             if ch not in current.children:
@@ -46,8 +47,7 @@ class Trie():
         current = self.root
         for ch in word:
             if len(current.children) > 1:
-                to_delete = (current.children, ch)
-                
+                to_delete = (current.children, ch) 
             current = current.children[ch]
         if current.children: 
             current.is_word = False
